@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/navigation'
+import { BlogList } from '@/components/blog-list'
 
 export const metadata = {
   title: 'Blog | Wakamiru Consulting',
@@ -15,16 +16,7 @@ export default function BlogPage() {
           Stay informed with our latest articles on business strategy, market trends, and industry insights.
         </p>
         
-        {/* Blog posts will be populated here */}
-        <div className="space-y-8">
-          {[1, 2, 3].map((i) => (
-            <article key={i} className="border-b pb-8 hover:shadow-lg transition p-6 rounded-lg bg-secondary">
-              <h3 className="text-2xl font-bold mb-2">Blog Post {i}</h3>
-              <p className="text-muted-foreground mb-4">Coming soon...</p>
-              <a href="#" className="text-accent font-semibold">Read More →</a>
-            </article>
-          ))}
-        </div>
+        <BlogList />
       </main>
     </div>
   )

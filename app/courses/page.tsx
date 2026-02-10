@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/navigation'
+import { CoursesList } from '@/components/courses-list'
 
 export const metadata = {
   title: 'Courses | Wakamiru Consulting',
@@ -15,15 +16,7 @@ export default function CoursesPage() {
           Advance your skills with our comprehensive selection of business and strategy courses.
         </p>
         
-        {/* Courses list will be populated here */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="border rounded-lg p-6 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-2">Course {i}</h3>
-              <p className="text-muted-foreground mb-4">Coming soon...</p>
-            </div>
-          ))}
-        </div>
+        <CoursesList />
       </main>
     </div>
   )

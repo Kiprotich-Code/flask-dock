@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/navigation'
+import { EventsList } from '@/components/events-list'
 
 export const metadata = {
   title: 'Events | Wakamiru Consulting',
@@ -15,15 +16,7 @@ export default function EventsPage() {
           Join our professional events to network with industry leaders and stay updated on market trends.
         </p>
         
-        {/* Events list will be populated here */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="border rounded-lg p-6 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-2">Event {i}</h3>
-              <p className="text-muted-foreground mb-4">Coming soon...</p>
-            </div>
-          ))}
-        </div>
+        <EventsList />
       </main>
     </div>
   )

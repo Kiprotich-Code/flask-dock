@@ -1,4 +1,6 @@
 import { Navigation } from '@/components/navigation'
+import { ConsultationForm } from '@/components/consultation-form'
+import { ConsultationsList } from '@/components/consultations-list'
 
 export const metadata = {
   title: 'Consultations | Wakamiru Consulting',
@@ -15,14 +17,12 @@ export default function ConsultationsPage() {
           Get personalized guidance from experienced business consultants for your specific needs.
         </p>
         
-        {/* Consultations list will be populated here */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="border rounded-lg p-6 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-2">Consultation {i}</h3>
-              <p className="text-muted-foreground mb-4">Coming soon...</p>
-            </div>
-          ))}
+        <div className="grid lg:grid-cols-2 gap-12 mb-12">
+          <ConsultationForm />
+          <div>
+            <h2 className="text-2xl font-bold mb-6">Your Consultations</h2>
+            <ConsultationsList />
+          </div>
         </div>
       </main>
     </div>
